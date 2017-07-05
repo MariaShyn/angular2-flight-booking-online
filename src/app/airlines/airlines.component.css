@@ -1,0 +1,134 @@
+.airlines-body {
+    overflow: hidden;
+}
+
+.airlines-body hr {
+    border-color: #545965;
+}
+
+.airlines-all-list {
+    padding: 0;
+}
+
+.airlines-all-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #545965;
+    border: 1px solid black;
+}
+
+.airlines-all-list li a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 15px 16px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+.airlines-all-list li a.active {
+    background-color: #333;
+    color: white;
+}
+
+.airlines-info {
+    padding: 0;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.airlines-info header {
+    font-size: 36px;
+    padding: 0 40px;
+    margin: 15px 0;
+}
+
+.airlines-description {
+    padding: 0 40px;
+}
+
+.airlines-description p {
+    padding: 0 15px;
+}
+
+.airlines-info ul.breadcrumb {
+    list-style: none;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    background-color: inherit;
+}
+
+/* Display list items side by side */
+.airlines-info ul.breadcrumb li {
+    display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+.airlines-info ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #767a83;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #767a83;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.airlines-gallery {
+    padding: 0 40px;
+}
+
+.airlines-gallery-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.airlines-gallery-img {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.airlines-gallery img {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.airlines-contacts {
+    padding: 0 40px;
+}
+
+.airlines-contacts-city p:first-child {
+    font-size: 22px;
+}
+
+
+.airlines-contacts-city  {
+    text-align: center;
+}
+
+.airlines-contacts-city p {
+    font-weight: bold;
+}
+
+#map {
+    width: 280px;
+    height: 270px;
+    left: calc((100% - 280px) /2);
+}

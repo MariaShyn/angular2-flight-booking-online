@@ -1,0 +1,16 @@
+.auth-form {
+    background-color: #414754;
+    border: 3px solid black;
+    padding: 15px;
+    overflow: hidden;
+    width: 240px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.auth-form button {
+    padding: 0 13px;
+    float: right;
+}

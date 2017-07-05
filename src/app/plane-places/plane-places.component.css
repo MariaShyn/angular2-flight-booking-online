@@ -1,0 +1,147 @@
+.places-search-result {
+    padding: 20px 0;
+    width: 70%;
+    color: white;
+    margin: 0 15%;
+}
+
+.places-header {
+    margin-left: 15%;
+}
+
+.plane-seatings {
+    background-image: url('assets/images/schema.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70%;
+    margin: 0 15%;
+    height: 0;
+    padding-top: 23.24%;
+    position: relative;
+}
+
+.seating {
+    position: absolute;
+    cursor: pointer;
+}
+
+.booked-places {
+    margin: 0 15%;
+    font-size: 18px;
+    visibility: hidden;
+}
+
+.booked-places button {
+    float: right;
+    padding: 0px 16px;
+}
+
+.vip {
+    height: 15%;
+    width: 3.5%;
+    background-color: rgb(26, 65, 109);
+    box-shadow:
+      2px 0 0 black,
+      10px 0 0 rgb(26, 65, 109);
+}
+
+.vip:hover {
+    background-color: rgb(94, 122, 152);
+    box-shadow:
+      2px 0 0 black,
+      10px 0 0 rgb(94, 122, 152);
+}
+
+.common {
+    height: 10%;
+    width: 2.8%;
+    background-color: red;
+    box-shadow:
+      2px 0 0 black,
+      7px 0 0 red;
+}
+
+.common:hover {
+    background-color: rgb(255, 127, 127);
+    box-shadow:
+      2px 0 0 black,
+      7px 0 0 rgb(255, 127, 127);
+}
+
+.commonA {
+    top: 5%;
+}
+
+.commonB {
+    top: 17%;
+}
+
+.commonC {
+    top: 29%;
+}
+
+.commonD {
+    top: 58%;
+}
+.commonE {
+    top: 70%;
+}
+.commonF {
+    top: 82%;
+}
+
+.vipA {
+    top: 5%;
+}
+
+.vipB {
+    top: 23%;
+}
+
+.vipC {
+    top: 59%;
+}
+
+.vipD {
+    top: 77%;
+}
+
+.row1 {
+  left: 28.5%;
+}
+
+.row2 {
+  left: 34%;
+}
+
+.row3 {
+    left: 41%;
+}
+
+.row4 {
+    left: 45%;
+}
+
+.row5 {
+    left: 49%;
+}
+
+.row6 {
+    left: 53%;
+}
+
+.row7 {
+    left: 63%;
+}
+
+.row8 {
+    left: 67%;
+}
+
+.row9 {
+    left: 71%;
+}
+
+.row10 {
+    left: 75%;
+}

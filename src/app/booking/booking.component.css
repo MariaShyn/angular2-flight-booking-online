@@ -1,0 +1,33 @@
+.book-form {
+    margin-top: 2%;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    background-color: #414754;
+    border: 3px solid black;
+    font-weight: bold;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.book-form input{
+    float: right;
+    padding: 4px 14px;
+    border-radius: 3px;
+    font-size: 17px;
+    color: black;
+}
+
+.book-form input:focus {
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(255,255,255,1);
+    box-shadow: 1px 1px 3px 0px rgba(255,255,255,1);
+    outline: none;
+}
+
+
+.book-form button{
+    float: right;
+    padding: 0 15px;
+}

@@ -1,0 +1,26 @@
+@media (max-width: 767px) {
+  .airlines-body {
+      overflow: visible;
+  }
+
+  .airlines-info {
+      overflow: visible;
+  }
+
+  .airlines-contacts-city {
+      font-size: 18px;
+  }
+
+  .airlines-description p {
+      font-size: 18px;
+  }
+
+  .airlines-gallery-img {
+      width: 100%;
+  }
+
+  .airlines-gallery-div {
+      display: block;
+      text-align: center;
+  }
+}

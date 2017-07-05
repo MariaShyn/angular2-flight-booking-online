@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+aside, article, nav, header {
+	display: block;
+}
+
+@font-face {
+	font-family: 'MyriadProRegular';
+	src: url('assets/fonts/MyriadProRegular.otf');
+}
+
+@font-face {
+	font-family: 'ANTQUAB';
+	src: url('assets/fonts/ANTQUAB.ttf');
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #1b1e25;
+    font-family: 'ANTQUAB';
+    color: white;
+    margin: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.main-page-search-result {
+    padding: 20px 0 0;
+    width: 50%;
+    color: white;
+    margin: 0 25% 5%;
+    text-align: center;
+    font-size: 16px;
+    background-color: #414754;
+    border: 3px solid black;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.main-page-search__aircompany-logo img{
+	max-width: 100%;
+}
+
+.main-page-search__departure-and-arrival {
+    text-align: center;
+    font-size: 18px;
+}
+
+.main-page-search__time-and-value {
+	  text-align: center;
+}
+
+.main-page-search__time-and-value p {
+	  margin: 0;
+}
+
+.main-page-search__time-and-value hr {
+	  margin: 10px 0;
+}
+
+.main-page-search__show-button {
+    text-align: right;
+    padding: 0;
+}
+
+.main-page-search__show-button a button {
+	  color: white;
+	  text-decoration: none;
+	  padding: 0 16px;
+}
+
+button {
+		background-color: #123942;
+		color: white;
+		padding: 7px 0;
+		height: 40px;
+		border: 2px solid black;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+}
+
+button:focus {
+		outline: none;
+}
+
+input {
+		padding: 4px 14px;
+		border-radius: 3px;
+		font-size: 17px;
+		max-width: 100%;
+		color: black;
+}
+
+
+input:focus {
+		-webkit-box-shadow: 1px 1px 3px 0px rgba(255,255,255,1);
+		-moz-box-shadow: 1px 1px 3px 0px rgba(255,255,255,1);
+		box-shadow: 1px 1px 3px 0px rgba(255,255,255,1);
+		outline: none;
+}

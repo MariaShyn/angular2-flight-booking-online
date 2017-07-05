@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<nav id="main-navbar" class="main-navbar">
+  <ul>
+      <li><a [routerLink]="['/']">MS&CO</a></li>
+      <li><a [routerLink]="['/']" class="active">АВИАРЕЙСЫ</a></li>
+      <li><a [routerLink]="['/airlines']">АВИАКОМПАНИИ</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

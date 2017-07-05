@@ -8,7 +8,8 @@
     "start": "ng serve",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "build": "ng build && node server.js"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +23,7 @@
     "@angular/router": "^3.3.1",
     "airport-codes": "^1.0.2",
     "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "express": "^4.15.3",
     "faker": "^4.1.0",

@@ -1,0 +1,17 @@
+@media (max-width: 992px) {
+    #plane-seatings {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        width: 100%;
+        margin-top: 270px;
+        padding-top: 33.2%;
+        margin-left: 0;
+    }
+
+    .booked-places {
+        margin-top: 270px;
+    }
+}

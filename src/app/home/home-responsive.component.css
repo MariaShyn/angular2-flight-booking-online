@@ -1,0 +1,50 @@
+@media (max-width: 992px) {
+  .main-page-search__form-item {
+      text-align: center;
+  }
+
+  .form-inputs-row-div:nth-of-type(2) {
+      margin-top: 5px;
+  }
+
+  .main-page-search__time-and-value {
+      margin: 11px 0;
+  }
+
+  .main-page-header {
+      height: 700px;
+  }
+
+  .main-page-header .plane {
+      width: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-page-search {
+      margin-left: 0;
+      margin-right: 0;
+  }
+
+  .main-page-search-result {
+      margin-left: 0;
+      margin-right: 0;
+      width: initial;
+  }
+
+  .main-page-search-result img{
+      max-width: 80%;
+  }
+
+  .main-page-pagination {
+      margin-right: auto;
+  }
+
+  .main-page-header p {
+      right: 0;
+  }
+
+  .main-page-results-header {
+      margin-left: 0;
+  }
+}
