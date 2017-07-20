@@ -1,11 +1,3 @@
-.airlines-body {
-    overflow: hidden;
-}
-
-.airlines-body hr {
-    border-color: #545965;
-}
-
 .airlines-all-list {
     padding: 0;
 }
@@ -18,7 +10,8 @@
     border: 1px solid black;
 }
 
-.airlines-all-list li a {
+.airlines-all-list li {
+    cursor: pointer;
     display: block;
     color: white;
     font-size: 18px;
@@ -28,7 +21,7 @@
     border-bottom: 1px solid #333;
 }
 
-.airlines-all-list li a.active {
+.airlines-all-list li.active {
     background-color: #333;
     color: white;
 }
@@ -36,7 +29,7 @@
 .airlines-info {
     padding: 0;
     height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .airlines-info header {

@@ -2,16 +2,6 @@ aside, article, nav, header {
 	display: block;
 }
 
-@font-face {
-	font-family: 'MyriadProRegular';
-	src: url('assets/fonts/MyriadProRegular.otf');
-}
-
-@font-face {
-	font-family: 'ANTQUAB';
-	src: url('assets/fonts/ANTQUAB.ttf');
-}
-
 html, body {
     height: 100%;
     width: 100%;
@@ -37,10 +27,11 @@ html, body {
     border: 3px solid black;
     font-weight: bold;
     overflow: hidden;
+    position: relative;
 }
 
 .main-page-search__aircompany-logo img{
-	max-width: 100%;
+	  max-width: 100%;
 }
 
 .main-page-search__departure-and-arrival {

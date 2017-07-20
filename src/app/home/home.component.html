@@ -1,5 +1,5 @@
 <header class="main-page-header">
-    <p>НАЧНИТЕ ПУТЕШЕСТВИЕ СВОЕЙ<br/> МЕЧТЫ ПРЯМО СЕЙЧАС!</p>
+    <p>START YOUR DREAMS JOURNEY<br>RIGHT NOW!</p>
     <img id="plane"  src="assets/images/plane2.png" alt="" class="plane"/>
     <img id="cloud1" src="assets/images/cloud.png" alt=""/>
     <img id="cloud2" src="assets/images/cloud.png" alt=""/>
@@ -14,15 +14,15 @@
             <div class="col-md-10 form-inputs-row-div">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-4 main-page-search__form-item">
-                        <label for="departure">Откуда</label><br/>
+                        <label for="departure">Departure</label><br/>
                         <input #departure id="departure" type="search" required=""/>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-4 main-page-search__form-item">
-                        <label for="arrival">Куда</label><br/>
+                        <label for="arrival">Destination</label><br/>
                         <input #arrival id="arrival" type="search" required=""/>
                     </div>
-                    <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-4 col-md-offset-0 main-page-search__form-item">
-                        <label for="date">Дата</label><br/>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-0 main-page-search__form-item">
+                        <label for="date">Date</label><br/>
                         <input #date id="date" type="date" required=""/>
                     </div>
                 </div>
@@ -32,49 +32,51 @@
                         arrival.value,
                         date.value,
                         direct.checked);
-                        departure.value='';arrival.value=''; date.value=''; direct.checked=''; ">Пошук</button>
+                        departure.value='';
+                        arrival.value='';
+                        date.value='';
+                        direct.checked='';">Search</button>
             </div>
         </div>
         <div class="row">
             <div class="col-md-10 main-page-search__form-item">
-                <label>Прямые рейсы</label>
+                <label>Direct flights</label>
                 <input #direct id="direct" type="checkbox"/>
             </div>
         </div>
     </form>
 </div>
-<h3 *ngIf="flights" class="main-page-results-header">Результати пошуку</h3>
+<h3 *ngIf="flights" class="main-page-results-header">Search results</h3>
 <div *ngFor="let flight of flights" class="main-page-search-result">
     <div class="row">
-        <div class="col-md-3 col-sm-12 main-page-search__aircompany-logo"><img src="./images/aircompany_logo.png"/></div>
-        <div class="col-md-9 col-sm-12">
+        <div class="col-md-12 col-sm-12">
             <div class="col-md-4 main-page-search__departure-and-arrival">
                 <p>{{flight.departure.city}}</p>
-                <p>{{flight.time_arrival | date:"MM/dd hh:mm"}}</p>
+                <p>{{flight.time_departure | date:"MM/dd hh:mm"}}</p>
             </div>
             <div class="col-md-4 col-sm-12 main-page-search__time-and-value">
-                <p>Длительность</p>
+                <p>Duration: {{ flight.time_arrival.getTime() - flight.time_departure.getTime() | date:"hh mm" }}</p>
                 <hr/>
-                <p>{{flight.pricesNormal[0]}} - {{flight.pricesVip[flight.pricesVip.length - 1]}}</p>
+                <p>Prices interval: {{ flight.pricesNormal[0] }} - {{ flight.pricesVip[flight.pricesVip.length - 1] }}</p>
             </div>
             <div class="col-md-4 col-sm-12 main-page-search__departure-and-arrival">
-                <p>{{flight.destination.city}}</p>
-                <p>{{flight.time_arrival | date:"MM/dd hh:mm"}}</p>
+                <p>{{ flight.destination.city }}</p>
+                <p>{{ flight.time_arrival | date:"MM/dd hh:mm" }}</p>
             </div>
         </div>
+        <div class="main-page-typeofflight" *ngIf="!flight.flightHierarchy.length">
+            Direct flight
+        </div>
+        <div class="main-page-typeofflight" *ngIf="flight.flightHierarchy.length">
+            Indirect flight
+        </div>
     </div>
+
     <div class="row">
         <div class="col-md-12 main-page-search__show-button">
             <a href="/places">
-                <button>Перейти</button>
+                <button>Go</button>
             </a>
         </div>
     </div>
-</div>
-<div *ngIf="flights" class="main-page-pagination">
-    <a href="#">«</a>
-    <a href="#">1</a>
-    <a href="#" class="active">2</a>
-    <a href="#">3</a>
-    <a href="#">»</a>
 </div>

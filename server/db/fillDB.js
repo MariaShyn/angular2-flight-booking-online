@@ -451,24 +451,24 @@ function fillFlights () {
 
 function fillDB() {
     fillAdmin()
-        // .then(function () {
-        //     return fillAbreviations();
-        // })
-        // .then(function () {
-        //      return fillAirCompanies();
-        // })
-        // .then(function () {
-        //     return fillPlaneModels();
-        // })
-        // .then(function () {
-        //     return fillPlanes();
-        // })
-        // .then(function () {
-        //     return fillPlanePlace();
-        // })
-        // .then(function () {
-        //     return fillUsers();
-        // })
+        .then(function () {
+            //return fillAbreviations();
+        })
+        .then(function () {
+             return fillAirCompanies();
+        })
+        .then(function () {
+            return fillPlaneModels();
+        })
+        .then(function () {
+            return fillPlanes();
+        })
+        .then(function () {
+            return fillPlanePlace();
+        })
+        .then(function () {
+            return fillUsers();
+        })
         .then(function () {
             return fillFlights();
         })

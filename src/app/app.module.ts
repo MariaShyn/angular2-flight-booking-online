@@ -12,6 +12,9 @@ import { AuthComponent } from './auth/auth.component';
 import { BookingComponent } from './booking/booking.component';
 import { PlanePlacesComponent } from './plane-places/plane-places.component';
 
+import { AirlinesService } from './services/airlines.service';
+import { CitiesService } from './services/cities.service';
+
 const ROUTES = [
   {
       path: '',
@@ -51,7 +54,10 @@ const ROUTES = [
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [
+    CitiesService,
+    AirlinesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

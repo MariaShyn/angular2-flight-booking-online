@@ -5,7 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  name: string = "Angular 2 on Express";
+  name = 'Angular 2 on Express';
+
   constructor() {}
 }

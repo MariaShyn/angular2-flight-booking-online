@@ -33,6 +33,10 @@
     border-bottom: 3px solid black;
 }
 
+.main-page-header img {
+  pointer-events: none;
+}
+
 .main-page-header #cloud1 {
     position: absolute;
     left: 0;
@@ -140,4 +144,13 @@
 
 .main-page-results-header {
     margin-left: 25%;
+}
+
+.main-page-typeofflight {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }

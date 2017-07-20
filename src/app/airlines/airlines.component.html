@@ -1,60 +1,42 @@
 <nav class="col-md-2 col-sm-2 col-xs-12 airlines-all-list">
   <ul>
-    <li><a href="">Southwest Airlines</a></li>
-    <li><a href="" class="active">Lufthansa</a></li>
-    <li><a href="">Air France</a></li>
-    <li><a href="">British Airways</a></li>
-    <li><a href="">...</a></li>
-    <li><a href="">...</a></li>
+    <li *ngFor="let airline of airlines"
+        [class.active]="airline === selectedAirline"
+        (click)="onSelect(airline)">
+      {{airline.name}}
+    </li>
   </ul>
 </nav>
-<section class="col-md-10 col-sm-10 col-xs-12 airlines-info">
-  <header>Lufthansa</header>
+<section *ngIf="selectedAirline" class="col-md-10 col-sm-10 col-xs-12 airlines-info">
+  <header>{{selectedAirline.name}}</header>
   <div id="description" class="airlines-description">
-    <h3>Описание</h3>
+    <h3>Description</h3>
     <hr/>
     <p>
-      Deutsche Lufthansa AG (FWB: LHA), более известная как Lufthansa (произносится Люфтханза) — флагманский авиаперевозчик Германии, крупнейший авиаконцерн Европы, включающий в себя и такие крупные авиакомпании, как Swiss International Airlines и Austrian Airlines.
-      В общем счёте Lufthansa выполняет рейсы в 78 стран мира по более чем двумстам направлениям. Воздушный флот всей авиакомпании, включая и дочерних перевозчиков, насчитывает около 620 воздушных судов, а общий пассажиропоток компании по данным 2013 года составил 104,5 миллиона человек, что делает концерн Deutsche Lufthansa AG одним из крупнейших авиапредприятий в мире.
+      {{selectedAirline.description}}
     </p>
   </div>
   <div id="gallery" class="row airlines-gallery">
-    <h3>Галерея</h3>
+    <h3>Gallery</h3>
     <hr/>
     <div class="row airlines-gallery-div">
-      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/lufthansa1.jpg"/></div>
-      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/lufthansa2.jpg"/></div>
-      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/lufthansa3.jpg"/></div>
+      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/{{selectedAirline.name.toLowerCase()}}/1.jpg"/></div>
+      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/{{selectedAirline.name.toLowerCase()}}/2.jpg"/></div>
+      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/{{selectedAirline.name.toLowerCase()}}/3.jpg"/></div>
     </div>
     <div class="row airlines-gallery-div">
-      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/lufthansa4.jpg"/></div>
-      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/lufthansa5.jpg"/></div>
-      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/lufthansa6.png"/></div>
+      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/{{selectedAirline.name.toLowerCase()}}/4.jpg"/></div>
+      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/{{selectedAirline.name.toLowerCase()}}/5.jpg"/></div>
+      <div class="col-md-4 col-sm-6 airlines-gallery-img"><img src="assets/images/{{selectedAirline.name.toLowerCase()}}/6.jpg"/></div>
     </div>
   </div>
   <div id="contacts" class="row airlines-contacts">
     <h3>Contacts</h3>
     <hr/>
-    <div class="col-md-6 col-sm-12 col-xs-12 airlines-contacts-city">
-      <p>Киев</p>
-      <p>Lufthansa German AirlinesBoryspil International Airport</p>
-      Индекс 08307<br/>
-      Адрес 1: Boryspil International Airport<br/>
-      Адрес 2: Terminal F, Departure hall<br/>
-      Телефон 1<br/>
-      +38 044 490 3800 (Call center)<br/>
-      Часы работы<br/>
-      Mo-So 04.50-08.00, 10.00-17.00<br/>
+    <div class="col-md-12 col-sm-12 col-xs-12 airlines-contacts-city">
+      <p>{{selectedAirline.location}}</p>
+      <p>{{selectedAirline.phone}}</p>
       <div id="map"></div>
-    </div>
-    <div class="col-md-6 col-sm-12 col-xs-12 airlines-contacts-city">
-      <p>Львов</p>
-      <p>LH Airport office</p>
-      Индекс 79040<br/>
-      Адрес 1: Airport, 168 Lyubinska Str. Lviv, Ukraine<br/>
-      Телефон 1<br/>
-      +38 044 490 3800 (Call center)<br/>
-      Часы работы 10:00 - 18:00<br/>
     </div>
   </div>
 </section>
